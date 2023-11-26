@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Contact = () => {
+const Contact = (props) => {
   return (
-    <div>Contact</div>
+    <div>Contact: {props.username}</div>
   )
 }
 

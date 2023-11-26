@@ -7,14 +7,14 @@ import Profile from './pages/Profile'
 import Contact from './pages/Contact'
 
 const App = () => {
-  const [username,setUsername] = useState("PedroTech");
+  const [username,setUsername] = useState("");
   return (
     <Router >
       <Navbar />
         <Routes>
             <Route path='/' element={<Home username={username} />} />
-            <Route path='/profile' element={<Profile username={username}/>} />
-            <Route path='/contact' element={<Contact username={username}/>} />
+            <Route path='/profile' element={<Profile username={username} setUsername={setUsername}/>} />
+            <Route path='/contact' element={<Contact  username={username}/>} />
         </Routes>
       </Router>
     
